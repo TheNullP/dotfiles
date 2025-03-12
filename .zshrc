@@ -5,9 +5,11 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="dracula"
+#ZSH_THEME="dracula"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
 plugins=(git)
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
@@ -32,7 +34,11 @@ alias statusturbo="cat /sys/devices/system/cpu/intel_pstate/no_turbo"
 export TERMINAL="alacritty"
 
 
+imwheel -k -b "8 9"
+c #LIMPA O TERMINAL
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # Iniciar tmux automaticamente
 [ -z "$TMUX" ] && exec tmux
+alias dotfiles='git --git-dir=/home/marcos/.dotfiles/ --work-tree=/home/marcos'

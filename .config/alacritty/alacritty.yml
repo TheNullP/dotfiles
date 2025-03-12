@@ -10,9 +10,10 @@ window:
 
 font:
   normal:
-    family: "JetBrains Mono"
+    family: "GohuFont 11 Nerd Font Mono"
     style: Regular
-  size: 10.0
+  size: 12.0
+
 
 colors:
   primary:

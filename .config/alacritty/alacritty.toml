@@ -30,18 +30,18 @@ background = "0xff79c6"  # Cor de fundo rosa
 text = "0x44475a"
 
 [font]
-size = 10.0
+size = 11.5
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "GohuFont 11 Nerd Font Mono"
 style = "Regular"
 
 [window]
 decorations = "none"
-opacity = 0.9
+opacity = 0.8
 
 [window.dimensions]
-columns = 70
+columns = 80
 lines = 30
 
 [window.padding]
