@@ -8,10 +8,12 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="dracula"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Desabilitar a mensagem de configuração
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
-plugins=(git)
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 eval "$(zoxide init zsh)"
 
@@ -42,3 +44,4 @@ c #LIMPA O TERMINAL
 # Iniciar tmux automaticamente
 [ -z "$TMUX" ] && exec tmux
 alias dotfiles='git --git-dir=/home/marcos/.dotfiles/ --work-tree=/home/marcos'
+source ~/powerlevel10k/powerlevel10k.zsh-theme
