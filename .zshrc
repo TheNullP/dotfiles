@@ -34,6 +34,8 @@ alias statusturbo="cat /sys/devices/system/cpu/intel_pstate/no_turbo"
 
 
 export TERMINAL="alacritty"
+export FLYCTL_INSTALL="/home/marcos/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 
 imwheel -k -b "8 9"
