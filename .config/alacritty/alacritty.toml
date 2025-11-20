@@ -33,7 +33,7 @@ text = "0x44475a"
 size = 10
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "Fira Code"
 style = "Regular"
 
 [window]
