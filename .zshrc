@@ -18,7 +18,7 @@ plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 eval "$(zoxide init zsh)"
 
 source $ZSH/oh-my-zsh.sh
-bindkey -r '\t'
+# bindkey -r '\t'
 
 alias cd="z"
 alias n="nvim"
@@ -27,11 +27,11 @@ alias e="exit"
 alias lzd="lazydocker"
 alias lzg="lazygit"
 
-bindkey '^I' expand-or-complete
+# bindkey '^I' expand-or-complete
 # O valor 0 indica que o turbo boost está ativo, e 1 que ele está desativado.
-alias onturbo="echo '0' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
-alias offturbo="echo '1' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
-alias statusturbo="cat /sys/devices/system/cpu/intel_pstate/no_turbo"
+# alias onturbo="echo '0' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+# alias offturbo="echo '1' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+# alias statusturbo="cat /sys/devices/system/cpu/intel_pstate/no_turbo"
 
 
 export TERMINAL="alacritty"

@@ -33,7 +33,7 @@ text = "0x44475a"
 size = 10
 
 [font.normal]
-family = "Fira Code"
+family = "JetBrains Mono"
 style = "Regular"
 
 [window]
