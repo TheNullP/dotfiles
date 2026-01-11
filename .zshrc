@@ -53,4 +53,10 @@ ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 . "$HOME/.asdf/asdf.sh"
 
+#. "$HOME/.asdf/completions/asdf.bash"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+. "$HOME/.asdf/asdf.sh"
+
 . "$HOME/.asdf/completions/asdf.bash"
+
