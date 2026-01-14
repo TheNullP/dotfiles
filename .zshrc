@@ -14,7 +14,15 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
+source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# O plugin de git já é nativo, mas para comandos extras:
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b '
+
+# Inicializar Zoxide
 eval "$(zoxide init zsh)"
 
 source $ZSH/oh-my-zsh.sh
@@ -26,12 +34,6 @@ alias c="clear"
 alias e="exit"
 alias lzd="lazydocker"
 alias lzg="lazygit"
-
-# bindkey '^I' expand-or-complete
-# O valor 0 indica que o turbo boost está ativo, e 1 que ele está desativado.
-# alias onturbo="echo '0' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
-# alias offturbo="echo '1' | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
-# alias statusturbo="cat /sys/devices/system/cpu/intel_pstate/no_turbo"
 
 
 export TERMINAL="alacritty"
@@ -51,12 +53,13 @@ alias dotfiles='git --git-dir=/home/marcos/.dotfiles/ --work-tree=/home/marcos'
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-. "$HOME/.asdf/asdf.sh"
 
 #. "$HOME/.asdf/completions/asdf.bash"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+# Carrega o asdf
 . "$HOME/.asdf/asdf.sh"
 
-. "$HOME/.asdf/completions/asdf.bash"
-
+# Configura o preenchimento automático CORRETO para Zsh
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
