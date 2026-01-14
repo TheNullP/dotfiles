@@ -14,15 +14,16 @@ POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 # typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 
-source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # O plugin de git já é nativo, mas para comandos extras:
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '%b '
 
+
 # Inicializar Zoxide
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
 eval "$(zoxide init zsh)"
 
 source $ZSH/oh-my-zsh.sh
@@ -63,3 +64,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Configura o preenchimento automático CORRETO para Zsh
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
+
+source ~/.zsh-plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh-plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias dotfiles='git --git-dir=/home/user/.dotfiles/ --work-tree=/home/user'
